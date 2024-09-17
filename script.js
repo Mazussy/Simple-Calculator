@@ -82,3 +82,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('keydown', (event) => {
+    const key = event.key;
+    if (key >= '0' && key <= '9') {
+        handleNumberClick(key);
+    } else if (key === '.') {
+        document.getElementById('decimal').click();
+    } else if (key === '+') {
+        document.getElementById('add').click();
+    } else if (key === '-') {
+        document.getElementById('subtract').click();
+    } else if (key === '*') {
+        document.getElementById('multiply').click();
+    } else if (key === '/') {
+        document.getElementById('divide').click();
+    } else if (key === 'Enter' || key === '=') {
+        document.getElementById('equals').click();
+    } else if (key === 'Backspace') {
+        document.getElementById('backspace').click();
+    } else if (key === 'Escape') {
+        document.getElementById('clear').click();
+    }
+});
