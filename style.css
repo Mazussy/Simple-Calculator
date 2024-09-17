@@ -3,35 +3,40 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #8371e777;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 .calculator {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .display {
-    background: #222;
+    background: #333;
     color: #fff;
     font-size: 2em;
     padding: 0.5em;
     text-align: right;
+    border-bottom: 1px solid #555;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* Add some space between buttons */
 }
 
 .btn {
     border: 1px solid #ccc;
     background: #eee;
     padding: 1em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.1s;
 }
 
 .btn:hover {
@@ -40,21 +45,86 @@ body {
 
 .btn:active {
     background: #ccc;
-}
-
-#equals {
-    grid-column: span 2;
-}
-
-#decimal {
-    grid-column: span 2;
+    transform: scale(0.98); /* Slightly shrink button on press */
 }
 
 #clear {
     background: #f44336;
     color: #fff;
+    grid-column: span 2;
 }
 
 #clear:hover {
     background: #e53935;
+}
+
+#backspace {
+    background: #ff9800;
+    color: #fff;
+}
+
+#backspace:hover {
+    background: #fb8c00;
+}
+
+#divide {
+    background: #2196f3;
+    color: #fff;
+}
+
+#divide:hover {
+    background: #1976d2;
+}
+
+#multiply {
+    background: #2196f3;
+    color: #fff;
+}
+
+#multiply:hover {
+    background: #1976d2;
+}
+
+#subtract {
+    background: #2196f3;
+    color: #fff;
+}
+
+#subtract:hover {
+    background: #1976d2;
+}
+
+#add {
+    background: #2196f3;
+    color: #fff;
+}
+
+#add:hover {
+    background: #1976d2;
+}
+
+#equals {
+    background: #4caf50;
+    color: #fff;
+    grid-column: span 2;
+}
+
+#equals:hover {
+    background: #388e3c;
+}
+
+#decimal {
+    background: #eee;
+}
+
+#decimal:hover {
+    background: #ddd;
+}
+
+.btn.number {
+    background: #fafafa;
+}
+
+.btn.number:hover {
+    background: #f5f5f5;
 }
